@@ -1,8 +1,17 @@
+// 1. locate the element(s)
 let square = document.getElementById('square')
 
+//2. Write the functionality needed when event occurs
 function changeColour(colour){
     square.style.background = colour;
 }
+
+//3. Link element , event to the functionality
+//         i.e. add an event listener
+square.addEventListener('click', (event) => changeColour('green'))
+square.addEventListener('mouseover', (event) => changeColour('grey'))
+square.addEventListener('mouseout', (event) => changeColour('red'))
+
 
 function createBuzzwordPhrase() {
     /* See https://en.wikipedia.org/wiki/List_of_buzzwords */
