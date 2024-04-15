@@ -19,10 +19,11 @@ function greeting(){
     words.innerHTML = "Welcome to Flatland.<br> I am Square!";
 }
 
-words.addEventListener('load',(event)=> greeting())
+// words.addEventListener('load',(event)=> greeting())
+words.onload = greeting()
 
 function showMessage(){
-    let message = "Build a" + createBuzzwordPhrase();
+    let message = "Build a " + createBuzzwordPhrase();
     words.innerHTML = message;
 }
 
