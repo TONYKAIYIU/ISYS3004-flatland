@@ -8,7 +8,7 @@ function changeColour(colour){
 
 //3. Link element , event to the functionality
 //         i.e. add an event listener
-square.addEventListener('click', (event) => showMessage());
+square.addEventListener('click', (event) => showMessage(), changeColour('green'));
 square.addEventListener('mouseover', (event) => changeColour('grey'));
 square.addEventListener('mouseout', (event) => changeColour('red'));
 
