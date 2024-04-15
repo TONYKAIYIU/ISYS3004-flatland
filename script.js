@@ -8,9 +8,9 @@ function changeColour(colour){
 
 //3. Link element , event to the functionality
 //         i.e. add an event listener
-square.addEventListener('click', (event) => changeColour('green'))
-square.addEventListener('mouseover', (event) => changeColour('grey'))
-square.addEventListener('mouseout', (event) => changeColour('red'))
+square.addEventListener('click', (event) => showMessage());
+square.addEventListener('mouseover', (event) => changeColour('grey'));
+square.addEventListener('mouseout', (event) => changeColour('red'));
 
 let words = document.getElementById('words')
 
@@ -20,6 +20,11 @@ function greeting(){
 }
 
 words.addEventListener('load',(event)=> greeting())
+
+function showMessage(){
+    let message = "Build a" + createBuzzwordPhrase();
+    words.innerHTML = message;
+}
 
 function createBuzzwordPhrase() {
     /* See https://en.wikipedia.org/wiki/List_of_buzzwords */
